@@ -1,0 +1,18 @@
+{
+ 	var a,b,c,d:int;
+	a = 1;
+	b = 1;
+	c = 1;
+	d = 1;
+
+	a = (a+b+1)*2 + 3/4;
+
+	a += 1;
+	a -= 1;
+	a %= 4;
+
+	print a;
+
+}
+
+// a(4) = 2; confirmed via python

@@ -1,0 +1,344 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @PROGRAM
+  @DECLS
+      ID=a
+       ID=s
+        ID=f
+         ID=d
+  @STATEMENTS
+   @STATEMENTS
+    @STATEMENTS
+     @STATEMENTS
+      @STATEMENTS
+       @FOR
+        @=
+            ID=a
+            #0
+        @BLOCK
+         @STATEMENTS
+          @WHILE
+              #1
+           @BLOCK
+            @STATEMENTS
+             @STATEMENTS
+              @WHILE
+                  #1
+               @BLOCK
+                @STATEMENTS
+                 @STATEMENTS
+                  @FOR
+                   @=
+                       ID=s
+                       #0
+                   @BLOCK
+                    @STATEMENTS
+                     @STATEMENTS
+                      @FOR
+                       @=
+                           ID=f
+                           #0
+                       @BLOCK
+                        @STATEMENTS
+                         @STATEMENTS
+                          @FOR
+                           @=
+                               ID=d
+                               #0
+                           @BLOCK
+                            @STATEMENTS
+                             @STATEMENTS
+                              @WHILE
+                                  #1
+                               @BLOCK
+                                @STATEMENTS
+                                 @STATEMENTS
+                                  @WHILE
+                                      #1
+                                   @BLOCK
+                                    @STATEMENTS
+                                     @BREAK
+                                 @BREAK
+                             @;
+                           @<
+                               ID=d
+                               #13
+                           @+=
+                               ID=d
+                            @+
+                                ID=d
+                                #1
+                         @;
+                       @<
+                           ID=f
+                           #12
+                       @+=
+                           ID=f
+                        @+
+                            ID=f
+                            #1
+                     @;
+                   @<
+                       ID=s
+                       #11
+                   @+=
+                       ID=s
+                    @+
+                        ID=s
+                        #1
+                 @BREAK
+             @BREAK
+        @<
+            ID=a
+            #10
+        @+=
+            ID=a
+         @+
+             ID=a
+             #1
+      @STATEMENT
+       @PRINT
+           ID=a
+     @STATEMENT
+      @PRINT
+          ID=s
+    @STATEMENT
+     @PRINT
+         ID=f
+   @STATEMENT
+    @PRINT
+        ID=d
+[A]-> NULL 
+[B]-> NULL 
+[C]-> NULL 
+[D]-> NULL 
+[E]-> NULL 
+[F]-> NULL 
+[G]-> NULL 
+[H]-> NULL 
+[I]-> NULL 
+[J]-> NULL 
+[K]-> NULL 
+[L]-> NULL 
+[M]-> NULL 
+[N]-> NULL 
+[O]-> NULL 
+[P]-> NULL 
+[Q]-> NULL 
+[R]-> NULL 
+[S]-> NULL 
+[T]-> NULL 
+[U]-> NULL 
+[V]-> NULL 
+[W]-> NULL 
+[X]-> NULL 
+[Y]-> NULL 
+[Z]-> NULL 
+[[]-> NULL 
+[\]-> NULL 
+[]]-> NULL 
+[^]-> NULL 
+[_]-> NULL 
+[`]-> NULL 
+[a]-> a 
+[b]-> NULL 
+[c]-> NULL 
+[d]-> d 
+[e]-> NULL 
+[f]-> f 
+[g]-> NULL 
+[h]-> NULL 
+[i]-> NULL 
+[j]-> NULL 
+[k]-> NULL 
+[l]-> NULL 
+[m]-> NULL 
+[n]-> NULL 
+[o]-> NULL 
+[p]-> NULL 
+[q]-> NULL 
+[r]-> NULL 
+[s]-> s 
+[t]-> NULL 
+[u]-> NULL 
+[v]-> NULL 
+[w]-> NULL 
+[x]-> NULL 
+[y]-> NULL 
+[z]-> NULL 
+
+OUTBUFF	EQU 51
+OUTBUFF1	EQU 52
+OUTBUFF2	EQU 53
+
+TEMP	EQU 3500
+TEMP2	EQU 3501
+STACK	EQU 3502
+START	EQU 80
+	ORIG   START
+
+VAR4	EQU 4   a
+VAR3	EQU 3   s
+VAR2	EQU 2   f
+VAR1	EQU 1   d
+	ENTA 0
+	STA VAR4
+LLOOP0	LDA VAR4
+	CMPA =10=
+	JL *+3
+	ENTA 0
+	JMP *+2
+	ENTA 1
+	JAZ LLOOP2
+LLOOP3	ENTA 1
+	JAZ LLOOP4
+LLOOP5	ENTA 1
+	JAZ LLOOP6
+	ENTA 0
+	STA VAR3
+LLOOP7	LDA VAR3
+	CMPA =11=
+	JL *+3
+	ENTA 0
+	JMP *+2
+	ENTA 1
+	JAZ LLOOP9
+	ENTA 0
+	STA VAR2
+LLOOP10	LDA VAR2
+	CMPA =12=
+	JL *+3
+	ENTA 0
+	JMP *+2
+	ENTA 1
+	JAZ LLOOP12
+	ENTA 0
+	STA VAR1
+LLOOP13	LDA VAR1
+	CMPA =13=
+	JL *+3
+	ENTA 0
+	JMP *+2
+	ENTA 1
+	JAZ LLOOP15
+LLOOP16	ENTA 1
+	JAZ LLOOP17
+LLOOP18	ENTA 1
+	JAZ LLOOP19
+	JMP LLOOP19
+	JMP LLOOP18
+LLOOP19	NOP
+	JMP LLOOP17
+	JMP LLOOP16
+LLOOP17	NOP
+LLOOP14	ENTA 1
+	ADD VAR1
+	JOV ERROR
+	STA VAR1
+	JMP LLOOP13
+LLOOP15	NOP
+LLOOP11	ENTA 1
+	ADD VAR2
+	JOV ERROR
+	STA VAR2
+	JMP LLOOP10
+LLOOP12	NOP
+LLOOP8	ENTA 1
+	ADD VAR3
+	JOV ERROR
+	STA VAR3
+	JMP LLOOP7
+LLOOP9	NOP
+	JMP LLOOP6
+	JMP LLOOP5
+LLOOP6	NOP
+	JMP LLOOP4
+	JMP LLOOP3
+LLOOP4	NOP
+LLOOP1	ENTA 1
+	ADD VAR4
+	JOV ERROR
+	STA VAR4
+	JMP LLOOP0
+LLOOP2	NOP
+	LDA VAR4
+	STA TEMP
+	ENTX 45
+	JAN *+2
+	ENTX 44
+	STX OUTBUFF
+	LDA TEMP
+	CHAR
+	STA OUTBUFF1
+	STX OUTBUFF2
+	OUT OUTBUFF(19)
+	JBUS *(19)
+	LDA VAR3
+	STA TEMP
+	ENTX 45
+	JAN *+2
+	ENTX 44
+	STX OUTBUFF
+	LDA TEMP
+	CHAR
+	STA OUTBUFF1
+	STX OUTBUFF2
+	OUT OUTBUFF(19)
+	JBUS *(19)
+	LDA VAR2
+	STA TEMP
+	ENTX 45
+	JAN *+2
+	ENTX 44
+	STX OUTBUFF
+	LDA TEMP
+	CHAR
+	STA OUTBUFF1
+	STX OUTBUFF2
+	OUT OUTBUFF(19)
+	JBUS *(19)
+	LDA VAR1
+	STA TEMP
+	ENTX 45
+	JAN *+2
+	ENTX 44
+	STX OUTBUFF
+	LDA TEMP
+	CHAR
+	STA OUTBUFF1
+	STX OUTBUFF2
+	OUT OUTBUFF(19)
+	JBUS *(19)
+	ENTA 0
+	HLT
+ERROR	ENTA 1
+	HLT
+	END START
+
+

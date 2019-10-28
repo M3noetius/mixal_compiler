@@ -1,0 +1,18 @@
+{	
+	var first, second, i, tmp: int;
+
+	first=0;
+	second=1;
+	tmp=0;
+	while(i<10)
+	{
+	
+		i=i+1;
+		tmp=first+second;
+		print tmp;
+		first=second;
+		second=tmp;
+	}
+}
+
+// put 701408733 first 44 fibonacci numbers

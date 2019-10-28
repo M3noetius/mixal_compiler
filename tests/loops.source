@@ -1,0 +1,31 @@
+{
+	var a, s, f, d: int;
+	
+	for ( a = 0; a < 10; a += 1)
+	{
+		while(1){
+			while(1){ 
+				for (s=0; s<11; s+=1){
+					for (f=0; f<12; f+=1){
+						for (d=0; d<13; d+=1){
+							while(1){
+								while(1){
+								break;}
+							break;}
+						;}
+					;}
+				;}
+				break;
+			}
+			break;
+		}
+	}
+
+	print a;
+	print s;
+	print f;
+	print d;
+
+}
+
+//result d(1) = 13, f(2) = 12, s(3) = 11, a(4) = 10

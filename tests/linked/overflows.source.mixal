@@ -1,0 +1,113 @@
+
+
+
+
+ @PROGRAM
+  @DECLS
+      ID=a
+  @STATEMENTS
+   @STATEMENTS
+    @STATEMENT
+     @=
+         ID=a
+      @/
+          #1
+          #0
+   @STATEMENT
+    @PRINT
+        ID=a
+[A]-> NULL 
+[B]-> NULL 
+[C]-> NULL 
+[D]-> NULL 
+[E]-> NULL 
+[F]-> NULL 
+[G]-> NULL 
+[H]-> NULL 
+[I]-> NULL 
+[J]-> NULL 
+[K]-> NULL 
+[L]-> NULL 
+[M]-> NULL 
+[N]-> NULL 
+[O]-> NULL 
+[P]-> NULL 
+[Q]-> NULL 
+[R]-> NULL 
+[S]-> NULL 
+[T]-> NULL 
+[U]-> NULL 
+[V]-> NULL 
+[W]-> NULL 
+[X]-> NULL 
+[Y]-> NULL 
+[Z]-> NULL 
+[[]-> NULL 
+[\]-> NULL 
+[]]-> NULL 
+[^]-> NULL 
+[_]-> NULL 
+[`]-> NULL 
+[a]-> a 
+[b]-> NULL 
+[c]-> NULL 
+[d]-> NULL 
+[e]-> NULL 
+[f]-> NULL 
+[g]-> NULL 
+[h]-> NULL 
+[i]-> NULL 
+[j]-> NULL 
+[k]-> NULL 
+[l]-> NULL 
+[m]-> NULL 
+[n]-> NULL 
+[o]-> NULL 
+[p]-> NULL 
+[q]-> NULL 
+[r]-> NULL 
+[s]-> NULL 
+[t]-> NULL 
+[u]-> NULL 
+[v]-> NULL 
+[w]-> NULL 
+[x]-> NULL 
+[y]-> NULL 
+[z]-> NULL 
+
+OUTBUFF	EQU 51
+OUTBUFF1	EQU 52
+OUTBUFF2	EQU 53
+
+TEMP	EQU 3500
+TEMP2	EQU 3501
+STACK	EQU 3502
+START	EQU 80
+	ORIG   START
+
+VAR1	EQU 1   a
+	ENTA 1
+	STA TEMP
+	LDX TEMP
+	ENTA 0
+	DIV =0=
+	JOV ERROR
+	STA VAR1
+	LDA VAR1
+	STA TEMP
+	ENTX 45
+	JAN *+2
+	ENTX 44
+	STX OUTBUFF
+	LDA TEMP
+	CHAR
+	STA OUTBUFF1
+	STX OUTBUFF2
+	OUT OUTBUFF(19)
+	JBUS *(19)
+	ENTA 0
+	HLT
+ERROR	ENTA 1
+	HLT
+	END START
+

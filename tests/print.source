@@ -1,0 +1,8 @@
+{
+	var i:int;
+	i = 1073741823;
+	
+	print 1073741823;
+	print i;
+	print 1337;
+}

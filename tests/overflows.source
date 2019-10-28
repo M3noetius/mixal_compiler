@@ -1,0 +1,13 @@
+{
+	var a:int;
+	a = 1 / 0;
+	print a;
+}
+a = 1073741823; // no error
+
+a = 1073741823 + 1; 
+a = 1073741823 * 2;
+a = -1073741823 - 1;
+
+// max number 1073741823
+// in error returns 1 we can only have errors because of overflows

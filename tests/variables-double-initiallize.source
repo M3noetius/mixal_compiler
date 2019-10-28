@@ -1,0 +1,7 @@
+{
+	var z, zb, zc, zd, Z, Zk, Zl, a,f,d, s:int;
+	var zsad:int;
+	var z:int;
+}
+
+// should not compile

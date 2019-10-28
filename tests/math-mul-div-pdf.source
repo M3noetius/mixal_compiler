@@ -1,0 +1,11 @@
+{
+	var i,k,a :int;
+	i = 3;
+	k = 2;
+	a = (i / k) * k + (i % k); 
+
+	print i;
+	print a;
+}
+
+// a(1) = i = 3; 
